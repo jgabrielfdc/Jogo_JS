@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Canvas</title>
+	<script src="carro.js">
+	</script>
+  </head>
+  <body>
+	<canvas id='meu_canvas' width='500' height='100' style='border:1px solid #000; width:99%;'></canvas>
+	<script src='animation.js'>
+	</script>
+
+  	<script>
+		var carro1=new Carro("blue",250);
+		var carro2=new Carro("red",300);
+
+		carro1.acelerar();
+		document.write(carro1.cor+": "+carro1.velocAtual);
+		document.write("<br>");
+		document.write(carro2.cor+": "+carro2.velocAtual);
+	</script>
+	
+</body>
+</html>

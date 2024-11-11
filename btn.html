@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Btns</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" />
+
+	<style>
+		.input_senha{
+			border:solid 1px black;
+			display:inline-block;
+			padding: 0px 3px;
+		}
+		input,button{
+			border:0px solid;
+			background-color:#FFF;
+		}
+
+		.fas{
+			transition:all 1s !important;;
+		}
+	</style>
+</head>
+<body>
+<div class="input_senha">
+<input type="password" value="1324" id="senha">
+<button id="btn" onclick="altera('senha');"><i class='fas fa-regular fa-eye'></i></button>
+</div>
+<script>
+function altera(id){
+	let element=document.getElementById(id);
+
+	if(element.attributes.type.value!="text"){
+		element.attributes.type.value="text";
+		document.getElementById("btn").innerHTML="<i class='fas fa-regular fa-eye-slash'></i>";
+	}else{
+		element.attributes.type.value="password";
+		document.getElementById("btn").innerHTML="<i class='fas fa-regular fa-eye'></i>";
+
+	}
+}
+</script>
+</body>
+</html>
